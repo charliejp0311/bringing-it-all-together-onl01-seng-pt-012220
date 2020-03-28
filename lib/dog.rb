@@ -1,6 +1,7 @@
 class Dog 
   attr_accessor :name, :breed, :id  
-  def initialize(dog_hash, id = nil)
+  def initialize(dog_hash, name:, breed:, id = nil)
+    binding.pry
     @name = dog_hash[:name]
     @breed = dog_hash[:breed] 
     @id = id 
