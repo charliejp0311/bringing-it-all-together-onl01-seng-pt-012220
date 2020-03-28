@@ -56,7 +56,7 @@ class Dog
     dug = DB[:conn].execute("SELECT * FROM dogs WHERE name = ?, breed = ?", name, breed)
     if !dug.empty?
       doggie = dug[0]
-      
+      self.new_from_db(doggie)
     
   end
   
