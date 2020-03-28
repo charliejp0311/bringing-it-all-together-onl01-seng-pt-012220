@@ -72,6 +72,7 @@ class Dog
   end
   
   def update
+    binding.pry
     sql = <<-SQL
       UPDATE dogs 
       SET name = ?, breed = ? 
