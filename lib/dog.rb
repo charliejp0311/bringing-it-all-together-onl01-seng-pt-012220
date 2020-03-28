@@ -33,6 +33,6 @@ class Dog
   
   def self.create(name:, breed:)
     
-    doggie.save
+    
   end
 end
