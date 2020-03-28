@@ -58,7 +58,7 @@ class Dog
     if !dug.empty?
       doggie = Dog.new_from_db(dug[0])
     else
-      Dog.create(name, breed)
+      Dog.create(name: name, breed: breed)
     end
   end
   
