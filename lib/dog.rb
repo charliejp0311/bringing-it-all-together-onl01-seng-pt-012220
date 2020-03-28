@@ -1,9 +1,8 @@
 class Dog 
   attr_accessor :name, :breed, :id  
-  def initialize(id = nil, name:, breed:)
-    # binding.pry
-    @name = name 
-    @breed = breed 
+  def initialize(dog_hash, id = nil)
+    @name = dog_hash[:name]
+    @breed = dog_hash[:breed] 
     @id = id 
   end 
   
@@ -33,7 +32,7 @@ class Dog
   end
   
   def self.create(name:, breed:)
-    doggie = Dog.new(name, breed)
+    
     doggie.save
   end
 end
