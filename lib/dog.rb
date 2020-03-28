@@ -72,6 +72,6 @@ class Dog
   end
   
   def update
-    sql = <<-SQL UPDATE
+    sql = <<-SQL UPDATE dogs WHERE 
   end
 end
