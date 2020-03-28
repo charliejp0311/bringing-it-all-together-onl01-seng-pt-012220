@@ -49,7 +49,7 @@ class Dog
       FROM dogs
       WHERE id = ?;
     SQL
-    found_dog = DB[:conn].execute(sql, id)
+    found_dog = self.new_from_db(DB[:conn].execute(sql, id)[0])
   end
   
 end
