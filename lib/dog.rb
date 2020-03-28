@@ -32,7 +32,7 @@ class Dog
   end
   
   def self.create(name:, breed:)
-    
+    binding.pry
     
   end
 end
