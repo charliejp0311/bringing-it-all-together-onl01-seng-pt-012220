@@ -1,0 +1,27 @@
+class Dog 
+  attr_accessor :name, :breed, :id  
+  def initialize(dog_hash, id = nil)
+    @name = dog_hash[:name]
+    @breed = dog_hash[:breed] 
+    @id = id 
+  end 
+  
+  def self.create_table
+    sql = <<-SQL
+      CREATE TABLE IF NOT EXISTS dogs(
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        bred TEXT
+      );
+    SQL
+    DB[:conn].execute(sql)
+  end
+  
+  def self.drop_table
+    DB[:conn].execute("DROP TABLE dogs;")
+  end
+  
+  def save
+      
+  end
+end
